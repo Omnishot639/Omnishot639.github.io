@@ -1,0 +1,139 @@
+.Texto {
+    grid-area: texto;
+    padding: 10px;
+}
+.Formulario {
+    grid-area: formulario;
+    padding: 10px;
+}
+.Rodape {
+    grid-area: rodape;
+    padding: 10px;
+}
+.Grid {
+  display: grid;
+  grid-template-areas:
+    'texto texto texto texto texto texto'
+    'texto texto texto texto texto texto'
+    'formulario formulario formulario formulario formulario formulario'
+    'rodape rodape rodape rodape rodape rodape';
+  grid-gap: 15px;
+  padding: 10px;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 30px;
+}
+.Grid > div {
+  background-color: rgb(69, 150, 67);
+  text-align: justify;
+  padding: 20 0px;
+  font-size: 15px;
+  border: 1px solid black;
+}
+.l1{
+    background-color: rgba(5, 44, 4, 0.507);
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: yellowgreen;
+}
+#menuHor ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(143, 131, 23);
+    position: fixed;
+    display: flex;
+    top: 0;
+    width: 100%;
+    justify-content: space-evenly;
+}
+#menuHor li{
+    width: 100%;
+}
+#menuHor li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 13px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: rgb(145, 137, 53);
+}
+.active{
+    background-color: rgb(145, 137, 53);
+}
+button{
+    border-radius: 7px;
+    padding: 5px;
+    margin-top: 3px;
+    width: 180px;
+    height: 40px;
+    background-color: rgb(127, 118, 255);
+    transition: transform .05s;
+}
+button:hover{    
+    background-color: rgba(56, 170, 161, 0.755);
+    transform: scale(1.05);
+}
+input{
+    width: 180px;
+}
+
+@media only screen and (max-width: 800px){
+    html{
+        width: 100%;
+        height: auto;
+    }
+    p{
+        font-size: 6vw;
+    }
+    a{
+        font-size: 5vw;
+    }
+    table{
+        font-size: 6vw;
+    }
+    address{
+        font-size: 6vw;
+    }
+    input, label{
+        font-size: 6vw;
+    }
+    button{
+        height: 80px;
+        width: 140px;
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1200px){
+    html{
+        width: 100%;
+        height: auto;
+    }
+    p{
+        font-size: 4vw;
+    }
+    input, label{
+        font-size: 4vw;
+        display: inline-block;
+    }
+    a{
+        font-size: 5vw;
+    }
+    table{
+        font-size: 4vw;
+    }
+    address{
+        font-size: 4vw;
+    }
+    button{
+        height: 120px;
+        width: 250px;
+        font-size: 4vw;
+    }
+}
