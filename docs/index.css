@@ -86,14 +86,17 @@ li a:hover:not(.active) {
         background-size: auto;
     }
     p{
-        font-size: 6vw;
+        font-size: 4vw;
     }
     a{
-        font-size: 5vw;
+        font-size: 3vw;
         text-decoration: none;
     }
     address{
-        font-size: 6vw;
+        font-size: 3vw;
+    }
+    .Grid{
+        padding-top: 20px;
     }
 }
 
@@ -107,13 +110,16 @@ li a:hover:not(.active) {
         background-size: auto;
     }
     p{
-        font-size: 4vw;
+        font-size: 3vw;
     }
     a{
-        font-size: 5vw;
+        font-size: 3vw;
         text-decoration: none;
     }
     address{
-        font-size: 4vw;
+        font-size: 3vw;
+    }
+    .Grid{
+        padding-top: 40px;
     }
 }
