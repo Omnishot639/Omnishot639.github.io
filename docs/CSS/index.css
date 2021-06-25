@@ -19,8 +19,8 @@
     'rodape rodape rodape rodape rodape rodape';
   grid-gap: 15px;
   padding: 10px;
-  width: fit-content;
-  height: fit-content;
+  width: auto;
+  height: auto;
   margin-top: 30px;
 }
 .Grid > div {
