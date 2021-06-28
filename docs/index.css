@@ -86,18 +86,24 @@ li a:hover:not(.active) {
         background-size: auto;
     }
     p{
-        font-size: 4vw;
+        font-size: 15px;
     }
     a{
-        font-size: 3vw;
+        font-size: 15px;
         text-decoration: none;
     }
     address{
-        font-size: 3vw;
+        font-size: 15px;
     }
     .Grid{
         padding-top: 20px;
-    }
+        display: grid;
+        grid-template-areas:
+          'navegação navegação navegação navegação navegação navegação'
+          'texto texto texto texto texto texto'
+          'texto texto texto texto texto texto'
+          'rodape rodape rodape rodape rodape rodape';
+      }
 }
 
 @media only screen and (min-width: 801px) and (max-width: 1200px){
@@ -110,16 +116,22 @@ li a:hover:not(.active) {
         background-size: auto;
     }
     p{
-        font-size: 3vw;
+        font-size: 20px;
     }
     a{
-        font-size: 3vw;
+        font-size: 20px;
         text-decoration: none;
     }
     address{
-        font-size: 3vw;
+        font-size: 20px;
     }
     .Grid{
         padding-top: 40px;
-    }
+        display: grid;
+        grid-template-areas:
+          'navegação navegação navegação navegação navegação navegação'
+          'texto texto texto texto texto texto'
+          'texto texto texto texto texto texto'
+          'rodape rodape rodape rodape rodape rodape';
+      }
 }
