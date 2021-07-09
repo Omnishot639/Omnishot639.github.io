@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="aulas.css"/>
+    <title>Fundamentos de Programação</title>
+</head>
+<body>
+    <div class="menuHor">
+        <a href="index.html">Início</a>
+        <div class="menuVer">
+            <button class="listaDeSelecao"> Aulas
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="listaConteudo">
+                <a href="Aula1.html">Aula 01</a>
+                <a href="Aula2.html" class="active">Aula 02</a>
+                <a href="Aula3.html">Aula 03</a>
+            </div>
+        </div>
+    </div>
+    <div class="Grid">
+        <div class="Texto">
+            <h1 id="aula-2">Aula 02</h1>
+
+                <h2>Introdução à programação com Python</h2>
+
+                <h3 id="assuntos-aula-2">Assuntos tratados</h3>
+                <p>&emsp;&emsp;O que é uma linguagem de programação? O que define uma linguagem
+                    como de alto nível? Quais são as partes de um código (programa)?</p>
+                <p>&emsp;&emsp;Linguagens de programação consideradas de alto nível são o
+                    meio pelo qual os códigos de programas são escritos na atualidade. Elas
+                    caracterizam estrutura e sintaxe organizadas de forma a simplificar a
+                    compreensão por humanos, permitindo que o desenvolvedor foque na resolução
+                    de problemas de forma lógica e clara, além de tornar a leitura do código
+                    compreensível a outros desenvolvedores.
+                <br>&emsp;&emsp;Linguagens de alto nível são então interpretadas ou compiladas por programas
+                    específicos para que as informações possam ser processadas pelo computador.
+                    Em suma, Interpretadores e compiladores são responsáveis
+                    por “traduzir” a linguagem voltada à compreensão humana para uma linguagem
+                    voltada à compreensão da máquina, ou linguagem de baixo nível, para que o
+                    código seja executado pelo sistema operacional.
+                <br>&emsp;&emsp;Atualmente existe uma extensa variedade de linguagens de
+                        programação, cada qual com uma finalidade específica. Alguns exemplos são:
+                        Javascript, uma linguagem voltada à programação para web; C, uma linguagem
+                        rápida que permite manipulação dinâmica de memória; Java, voltada à
+                        programação orientada a objetos, etc.
+                <br>&emsp;&emsp;A linguagem Python é considerada multiparadigma, o que
+                        possibilita seu emprego de diversas formas e para diversos tipos de
+                        aplicações. Ademais, sua sintaxe é simples e de fácil compreensão,
+                        caracterizada por dispensar o uso de elementos como ponto-vírgula,
+                        chaves, colchetes e parênteses - em alguns casos -, etc. Além de ausentar
+                        a necessidade de uma estrutura de funções mais complexa, como ocorre
+                        frequentemente em demais linguagens.
+                <br>&emsp;&emsp;Por essas razões, o aprendizado da linguagem não requer
+                        muito esforço, o que a torna uma ferramenta muito popular entre iniciantes
+                        na área da computação, visto que dessa forma é possível focar os estudos na
+                        lógica de programação, em oposição às possíveis complexidades da linguagem
+                        em si.</p>
+
+                <h3 id="elementos-aula-2">Alguns elementos da programação</h3>
+
+                <h4>Variáveis</h4>
+                <p>&emsp;&emsp;Variáveis são elementos criados arbitrariamente pelo
+                        programador, elas correspondem a uma informação específica que é designada,
+                        e são referenciadas por um nome específico. Um exemplo de declaração de uma
+                        variável seria:
+                <br>&emsp;&emsp;x = 1 		Em que a variável ‘x’ carrega o valor 1.
+                <br>&emsp;&emsp;Variáveis podem ter seu valor modificado ao longo do código,
+                    e podem corresponder a qualquer tipo de dado. Portanto, uma sequência de
+                    caracteres, por exemplo, também pode ser armazenada em uma variável, bem como
+                    números inteiros ou não, listas, arrays, etc.</p>
+
+                <h4>Comandos de entrada</h4>
+                <p>&emsp;&emsp;Um comando é algo muito próximo de uma função, entretanto,
+                    diferentemente da função que possui um “retorno esperado”, os comandos seguem
+                    apenas um processo, não alterando a entrada.
+                <br>&emsp;&emsp;Aplicando esta definição ao que vimos até o momento temos:
+                    print(a) e input(b), onde, print é um comando que exibe na tela o parâmetro
+                    “a” definido pelo programador em conjunto, ou não, com o usuário e tem como
+                    resultado “a” impresso pela interface - podemos ver que o comando print não
+                    altera o valor de “a”, apenas executa sua impressão. E input é um comando que
+                    recebe um valor digitado “b” e tem como resultado uma variável, função, lista,
+                    etc., recebendo o novo valor digitado - novamente, o input não altera a
+                    entrada “b”, apenas atribui ela a uma variável.</p>
+        </div>
+        <div class="Navegação">
+            <dt>
+                <h1>Aula 2</h1>
+                <a href="#assuntos-aula-2"><dd>Assuntos tratados</dd></a>
+                <a href="#elementos-aula-2"><dd>Elementos da Programação</dd></a>
+            </dt>
+        </div>
+        <div class="Rodape">
+            <address>
+                Responsáveis pela página <a href="mailto:leonardoq@alunos.utfpr.edu.br" id="mailto">Leonardo J. R. Quadros, Maria F. O. de Figueiredo, Talita F. R. Canteri</a>.
+            </address>
+        </div>
+    </div>
+</body>
+</html>

@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="index.css"/>
     <title>Fundamentos de Programação</title>
 </head>
 <body>
-    <nav id="menuHor">
-        <ul>
-            <li><a class="active" href="index.html">Início</a></li>
-        </ul>
-    </nav>
+    <div class="menuHor">
+        <a href="index.html" class="active">Início</a>
+        <div class="menuVer">
+            <button class="listaDeSelecao"> Aulas
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="listaConteudo">
+                <a href="Aula1.html">Aula 01</a>
+                <a href="Aula2.html">Aula 02</a>
+                <a href="Aula3.html">Aula 03</a>
+            </div>
+        </div>
+    </div>
     <div class="Grid">
         <div class="Texto">
             <h1 id="aula-1">Aula 01</h1>
@@ -129,6 +138,70 @@
                     recebe um valor digitado “b” e tem como resultado uma variável, função, lista,
                     etc., recebendo o novo valor digitado - novamente, o input não altera a
                     entrada “b”, apenas atribui ela a uma variável.</p>
+
+            <h1 id="aula-3">Aula 03</h1>
+
+                <h2>Dados e Modularização</h2>
+    
+                <h3 id="assuntos-aula-3">Assuntos tratados</h3>
+                    <p>&emsp;&emsp;Qual é a relação entre dados e variáveis? Quais são os
+                        tipos de dados mais básicos? O que é modularização? O quesão funções?
+                        Como elas se ocorrem em diferentes paradigamas de programação?</p>
+                    <p>&emsp;&emsp;Em programação são aplicadas diversas formas diferentes
+                        de informação, que são classificadas em diferentes tipos de dados.
+                        Em diversas linguagens é necessário especificar o tipo de dado na
+                        declaração de cada variável, isso serve para que o compilador “saiba”
+                        do que se trata a variável e possa produzir os resultados adequados
+                        ao fim do processo.
+                    <br>&emsp;&emsp;Na linguagem Python, entretanto, a declaração do tipo de
+                        dado de cada variável é dispensada, visto que o interpretador reconhece
+                        o valor de cada uma e realiza o processo de especificação automaticamente
+                        antes que o código seja compilado. Por essa razão é possível que o valor
+                        de uma variável seja alterado, e, com ele, o tipo de dado também. Por
+                        exemplo, uma variável pode ser declarada com o valor de um inteiro, mas
+                        ao final da função é possível que retorne um valor do tipo float.
+                        <br>&emsp;&emsp;Os tipos de dados básicos em programação são:
+                    <ol>
+                        <li>int: inteiros</li>
+                        <li>float: valores reais até algumas casas decimais</li>
+                        <li>string: sequências de caracteres</li>
+                        <li>bool: verdadeiro e falso</li>
+                    </ol></p>
+    
+                <h3 id="elementos-aula-3">Modularização</h3>
+    
+                    <p>&emsp;&emsp;Modularizar um código significa dividir suas funções
+                        separadamente. Isso permite que sejam evitadas repetições desnecessárias,
+                        por exemplo, quando a mesma sequência de comandos deve ser aplicada em
+                        diferentes pontos do programa, além de tornar a leitura do código mais
+                        compreensível e lógica. 
+                    <br>&emsp;&emsp;Na programação funcional cada programa é completamente
+                        modularizado e o decorrer dos processos ocorre completamente a partir de
+                        funções.</p>
+                    <p>&emsp;&emsp;Em Python a forma padrão de se definir uma função segue o seguinte modelo:</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;def NomeDaFunção(parâmetros):
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(código)</p>
+                    <p>&emsp;&emsp;Para que uma função seja executada ela deve ser chamada da seguinte forma:</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;NomeDaFunção(argumentos):</p>
+                    <p>&emsp;&emsp;No paradigma de programação orientada a objetos, cada função
+                        retorna um valor, que é um objeto, o que faz com que a função
+                        consequentemente também o seja. Este paradigma permite, também,
+                        que objetos possuam funções únicas que outros não tem, isso proporciona
+                        um código principal (main) mais limpo e torna simples a lógica de
+                        operações complexas, além de garantir que funções possam ser aplicadas
+                        e definidas de diversas maneiras específicas. Uma função pode, por
+                        exemplo, ser utilizada como valor de uma variável, ou ainda ser aplicada
+                        como argumento de outra função (são disso exemplos a relação de herança
+                        e hierarquia dentro das classes).
+                    <br>&emsp;&emsp;Agora podemos entender com mais nitidez a diferença entre
+                        comando e função que citamos na última aula. Quando um comando não é
+                        suficiente para realizar uma operação, quando a repetição se torna
+                        excessiva e atrapalha a clareza do código e em situações afins, a
+                        utilização de uma função (modularização) é a solução. Usar comandos dentro
+                        de uma função pode colocar em xeque a definição das funções como: processos
+                        que alteram o valor da entrada; mas, neste momento, devemos pensar que, como
+                        proposto acima, não é vantajoso para a clareza do código criar uma função
+                        apenas para utilizar um comando, sem a presença de cálculos mais complexos.</p>
         </div>
         <div class="Navegação">
             <dt>
@@ -140,6 +213,11 @@
                 <a href="#aula-2">Aula 2</a>
                 <a href="#assuntos-aula-2"><dd>Assuntos tratados</dd></a>
                 <a href="#elementos-aula-2"><dd>Elementos da<br>programação</dd></a>
+            </dt>
+            <dt>
+                <a href="#aula-3">Aula 3</a>
+                <a href="#assuntos-aula-3"><dd>Assuntos tratados</dd></a>
+                <a href="#mod-aula-2"><dd>Modularização</a>
             </dt>
         </div>
         <div class="Rodape">
