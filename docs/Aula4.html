@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="aulas.css"/>
+    <title>Fundamentos de Programação</title>
+</head>
+<body>
+    <div class="menuHor">
+        <a href="index.html">Início</a>
+        <div class="menuVer">
+            <button class="listaDeSelecao"> Aulas
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="listaConteudo">
+                <a href="Aula1.html">Aula 01</a>
+                <a href="Aula2.html">Aula 02</a>
+                <a href="Aula3.html">Aula 03</a>
+                <a href="Aula1.html" class="active">Aula 04</a>
+            </div>
+        </div>
+    </div>
+    <div class="Grid">
+        <div class="Texto">
+            <h1 id="aula-1">Aula 04</h1>
+
+                <h2>Começando a programar</h2>
+                
+                <h3 id="assuntos-aula-4">Assuntos tratados</h3>
+                <p>&emsp;&emsp;O que são bibliotecas? O que é uma estrutura de decisão?
+                    Para que servem os comentários? Como tudo isso afeta a programação em Python?</p>
+
+                <h2 id="biblio-aula-4">Bibliotecas</h2>
+                <p>&emsp;&emsp;Bibliotecas são programas designados para simplificar a
+                    criação de outros programas. Esses códigos são conjuntos de classes
+                    e funções que podem ser aplicadas de forma generalizada e
+                    relativamente inespecífica. Ao serem importadas, bibliotecas
+                    permitem que as mesmas funções e classes sejam aplicadas em
+                    diferentes projetos e programas, por essa razão, podem ser criadas
+                    visando projetos de áreas específicas, como análise de dados, ou
+                    podem ser amplas, como a biblioteca math, voltada a processos
+                    matemáticos em geral.
+                    <br>&emsp;&emsp;As formas de se carregar uma biblioteca em um
+                    programa seguem as seguinte sintaxes:</p>
+                <p>&emsp;&emsp;&emsp;&emsp;import [biblioteca]&emsp;
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                    &emsp;importa todos os elementos da biblioteca
+                    <br>&emsp;&emsp;&emsp;&emsp;from [biblioteca] import [elemento]&emsp;
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                    &emsp;importa somente os elementos citados
+                    <br>&emsp;&emsp;&emsp;&emsp;from [biblioteca] import *&emsp;
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                    &emsp;importa todos os elementos</p>
+                <p>&emsp;&emsp;Ao se instalar uma linguagem e criar um ambiente de
+                    programação, algumas bibliotecas padrão são automaticamente incluídas;
+                    elas geralmente são voltadas à funções básicas de uso geral, como o
+                    exemplo da biblioteca math.
+                    <br>&emsp;&emsp;Entretanto, é possível obter bibliotecas voltadas a
+                    aplicações mais específicas através de diversas comunidades de
+                    desenvolvimento na internet. Alguns exemplos que podem ser citados
+                    são a biblioteca Pandas para análise de dados; TK, para
+                    desenvolvimento de interfaces gráficas; matplotlib, para plotar
+                    gráficos, etc.
+                </p>
+
+                <h2 id="coment-aula-4">Comentários</h2>
+                <p>&emsp;&emsp;Consistem em linhas escritas em meio ao código que são
+                    marcadas de forma específica para serem identificadas como
+                    comentários, dessa forma não são consideradas no processamento.
+                    Comentários servem para que sejam deixadas pequenas explicações
+                    referentes aos elementos do código, como por exemplo a forma de
+                    aplicação, ou para especificar o que determinada função realiza.
+                    <br>&emsp;&emsp;Dessa forma, é possível que desenvolvedores
+                    compreendam melhor a lógica escrita nos programas quando trabalharem
+                    em grupos, além de facilitar a compreensão caso seja necessário
+                    retornar ao código após muito tempo sem alterá-lo.
+                </p>
+
+                <h2 id="estrutura-aula-4">Estruturas de decisão</h2>
+                <p>&emsp;&emsp;Até o momento, analisamos o código como sendo: uma
+                    sequência de regras que seguem uma ordem lógica, nele há entradas
+                    que resultam em uma ou “n” saídas. Estas entradas são parâmetros
+                    para a realização de cálculos, operações, ações, etc, e também
+                    obedecem a um conjunto de regras; enquanto estes parâmetros forem
+                    fornecidos adequadamente, tudo irá funcionar, caso contrário, não.
+                    <br>&emsp;&emsp;Para garantir este bom funcionamento do código, o
+                    programador deve utilizar o artifício das “estruturas de decisão”.
+                    São ferramentas que fazem a comparação entre afirmações, e permitem
+                    que condições (as regras lógicas) sejam obedecidas, independentemente
+                    dos valores de entrada ou de quem estiver fornecendo-os.
+                    <br>&emsp;&emsp;A sintaxe básica de uma estrutura de decisão é como
+                    segue:
+                </p>
+                <p>
+                    &emsp;&emsp;&emsp;&emsp;if(comparação = verdadeira):
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;executar (...)
+                    <br>&emsp;&emsp;&emsp;&emsp;else:
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;executar (...)
+                </p>
+                <p>&emsp;&emsp;Para casos mais complexos, nos quais características booleanas
+                    (verdadeiro e falso) avulsas não são suficientes, há uma outra
+                    estrutura intermediária, o “elif”:
+                </p>
+                <p>
+                        &emsp;&emsp;&emsp;&emsp;if(x > 0):
+                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;executar (...)
+                        <br>&emsp;&emsp;&emsp;&emsp;elif(x < 0):
+                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;executar (...)
+                        <br>&emsp;&emsp;&emsp;&emsp;else:
+                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;executar (...)
+                </p>
+                <p>&emsp;&emsp;Dessa maneira, sempre que nenhuma das verificações for
+                    verdadeira, o programa irá executar o que está contido no “else”.
+                    Um exemplo prático é o jogo do Pacman e para visualizar a situação
+                    chamaremos: coordenada do pacman (CP), coordenada das vitaminas (CV),
+                    vitamina ativada (VT), função duraçãoVitamina(). Segue da seguinte
+                    forma:                    
+                </p>
+                <p>
+                    &emsp;&emsp;&emsp;&emsp;if(CP == CV):
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;VT = True
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;duraçãoVitamina()
+                    <br>&emsp;&emsp;&emsp;&emsp;else:
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;VT = False
+                </p>
+                <p>&emsp;&emsp;Outra situação pertinente é no caso do “input” por parte
+                    do usuário. Vamos supor que um certo programa “Calculadora.py”
+                    executa as funções básicas da matemática (soma, subtração,
+                    multiplicação e divisão) com números inteiros fornecidos pelo
+                    usuário. Caso o usuário digite um valor diferente de int, o programa
+                    deve ser capaz de identificar o problema e exibir uma mensagem de erro.
+                </p>
+        </div>
+        <div class="Navegação">
+            <dt>
+                <h1>Aula 04</h1>
+                <a href="#assuntos-aula-4"><dd>Assuntos tratados</dd></a>
+                <a href="#biblio-aula-4"><dd>Bibliotecas</dd></a>
+                <a href="#coment-aula-4"><dd>Comentários</dd></a>
+                <a href="#estrutura-aula-4"><dd>Estruturas de decisão</dd></a>
+            </dt>
+        </div>
+        <div class="Rodape">
+            <address>
+                Responsáveis pela página <a href="mailto:leonardoq@alunos.utfpr.edu.br" id="mailto">Leonardo J. R. Quadros, Maria F. O. de Figueiredo, Talita F. R. Canteri</a>.
+            </address>
+        </div>
+    </div>
+</body>
+</html>

@@ -6,6 +6,7 @@
     grid-area: navegação;
     padding: 10px;
     height: fit-content;
+    width: 150px;
 }
 .Rodape {
     grid-area: rodape;
@@ -22,7 +23,6 @@
   padding: 15px;
   width: auto;
   height: auto;
-  margin-top: 30px;
 }
 .Grid > div {
   background-color: rgb(101, 141, 200);
@@ -130,6 +130,12 @@ a{
     address{
         font-size: 15px;
     }
+    .Navegação {
+      grid-area: navegação;
+      padding: 10px;
+      height: fit-content;
+      width: auto;
+  }
     .Grid{
         padding-top: 20px;
         display: grid;
@@ -160,6 +166,12 @@ a{
     address{
         font-size: 20px;
     }
+    .Navegação {
+      grid-area: navegação;
+      padding: 10px;
+      height: fit-content;
+      width: auto;
+  }
     .Grid{
         padding-top: 40px;
         display: grid;
