@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="aulas.css"/>
+    <title>Fundamentos de Programação</title>
+</head>
+<body>
+    <div class="menuHor">
+        <a href="index.html">Início</a>
+        <div class="menuVer">
+            <button class="listaDeSelecao"> Aulas
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="listaConteudo">
+                <a href="Aula1.html">Aula 01</a>
+                <a href="Aula2.html">Aula 02</a>
+                <a href="Aula3.html">Aula 03</a>
+                <a href="Aula4.html">Aula 04</a>
+                <a href="Aula5.html">Aula 05</a>
+                <a href="Aula6.html">Aula 06</a>
+                <a href="Aula7.html" class="active">Aula 07</a>
+            </div>
+        </div>
+    </div>
+    <div class="Grid">
+        <div class="Texto">
+            <h1 id="aula-7">Aula 07</h1>
+
+                <h2>Vetores em python</h2>
+                
+                <h3 id="assuntos-aula-7">Assuntos tratados</h3>
+                <p>&emsp;&emsp;O que são listas (vetores)? Como criar uma lista? Como as listas armazenam dados?
+                    Para que é usada uma lista?</p>
+
+                <h3 id="listas-aula-7">Listas (vetores e matrizes)</h3>
+
+                <p>&emsp;&emsp;Vetores são estruturas de dados homogêneas, significando que apresentam somente dados do mesmo tipo,
+                    e unidimensionais, indicando que são organizadas em índices de uma única dimensão (o que difere de matrizes, por
+                    exemplo).
+                    <br>&emsp;&emsp;Em python, as chamadas Listas são utilizadas para armazenar uma série de valores em uma única
+                    variável, e elas apresentam a seguinte sintaxe:
+                    </p>
+                <p>&emsp;&emsp;&emsp;&emsp;lista = [1, 2, 3, 4, 5]
+                    </p>
+                <p>&emsp;&emsp;A sintaxe acima, utilizada para checar o conteúdo de cada índice da lista, é organizada de acordo com
+                    o nome da variável que corresponde à lista (vermelho), o índice procurado (amarelo) e o valor armazenado (azul).
+                    Note que os dados acima são booleanos, e todos apresentam o valor True.
+                    <br>&emsp;&emsp;Listas também podem estar contidas dentro de outras listas, o que faz com que não seja necessário
+                    armazenar somente um único valor em cada posição da lista original. Exemplo:
+                    </p>
+                <p>&emsp;&emsp;&emsp;&emsp;lista = [1, [2,3], 4]
+                    <br>&emsp;&emsp;&emsp;&emsp;lista[0] == 1
+                    <br>&emsp;&emsp;&emsp;&emsp;lista[1] == [2, 3]
+                    <br>&emsp;&emsp;&emsp;&emsp;lista[2] == 4
+                    </p>
+                <p>&emsp;&emsp;É possível alterar o valor de um elemento de uma lista de forma similar àquela utilizada para checar
+                    o valor:
+                    </p>
+                <p>&emsp;&emsp;&emsp;&emsp;lista[0] = 9
+                    </p>
+                <p>&emsp;&emsp;Agora, o valor armazenado na posição 0 da lista seria 9. Note que para definir um valor novo é
+                    utilizado um único sinal de igualdade, enquanto para checar se um valor está correto usa-se o sinal de igualdade
+                    duplo ‘==’.
+                    <br>&emsp;&emsp;Para acessar o valor de um índice em uma lista é necessário somente indicar o nome da lista e o
+                    índice a ser acessado:
+                    </p>
+                <p>&emsp;&emsp;&emsp;&emsp;lista[0]
+                    </p>
+                <p>&emsp;&emsp;Com isso, é possível visualizar esse valor utilizando o método print:
+                    </p>
+                <p>&emsp;&emsp;&emsp;&emsp;print(lista[0])
+                    </p>
+
+                <h3 id="pratica-aula-7">Listas na prática</h3>
+
+                <p>&emsp;&emsp;Vetores e matrizes são, na prática, banco de dados, assim como o MySQL ou o MongoDB. Vamos supor que
+                    uma lanchonete necessita armazenar os produtos que vende e seus respectivos valores. Para resolver este problema,
+                    ignorando a construção da interface, um código muito simples pode ser construído. É necessário uma lista
+                    “produtoValor”, que armazene, para cada item, a variável “produto” e “preço”. O resultado é como segue:
+                    </p>
+                <p>&emsp;&emsp;&emsp;&emsp;def adicionaItem(produto, preco):
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;produtoValor.append([produto, preco])
+                    <br><br>&emsp;&emsp;&emsp;&emsp;produtoValor = []
+                    <br>&emsp;&emsp;&emsp;&emsp;desligado = False
+                    <br>&emsp;&emsp;&emsp;&emsp;while not desligado:
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;print("Conferir lista - 1\nAdicionar item - 2\nFechar sistema - 3\n")
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;opcao = int(input())
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;while opcao > 3 or opcao < 1:
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;opcao = int(input())
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if(opcao == 1):
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;print(produtoValor, end="\n")
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;elif(opcao == 2):
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;produto = input("Digite o produto: ")
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;valor = input("Digite o valor (adicionar R$): ")
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;adicionaItem(produto, valor)
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;else:
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;desligado = True
+                    <br><br>&emsp;&emsp;&emsp;&emsp;print(produtoValor)
+                    </p>
+                    <p>&emsp;&emsp;O código acima, obviamente, seria mais bem trabalhado em uma situação real - ou até mesmo
+                        substituído por um banco de dados e uma interface gráfica -, no entanto, podemos perceber a utilidade das
+                        listas e como elas são aplicadas na prática.
+                        </p>
+        </div>
+        <div class="Navegação">
+            <dt>
+                <h1>Aula 07</h1>
+                <a href="#assuntos-aula-7"><dd>Assuntos tratados</dd></a>
+                <a href="#listas-aula-7"><dd>Listas (vetores e matrizes)</dd></a>
+                <a href="#pratica-aula-7"><dd>Listas na prática</dd></a>
+            </dt>
+        </div>
+        <div class="Rodape">
+            <address>
+                Responsáveis pela página <a href="mailto:leonardoq@alunos.utfpr.edu.br" id="mailto">Leonardo J. R. Quadros e Maria F. O. de Figueiredo</a>.
+            </address>
+        </div>
+    </div>
+</body>
+</html>
