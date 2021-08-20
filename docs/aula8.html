@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="aulas.css"/>
+    <title>Fundamentos de Programação</title>
+</head>
+<body>
+    <div class="menuHor">
+        <a href="index.html">Início</a>
+        <div class="menuVer">
+            <button class="listaDeSelecao"> Aulas
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="listaConteudo">
+                <a href="Aula1.html">Aula 01</a>
+                <a href="Aula2.html">Aula 02</a>
+                <a href="Aula3.html">Aula 03</a>
+                <a href="Aula4.html">Aula 04</a>
+                <a href="Aula5.html">Aula 05</a>
+                <a href="Aula6.html">Aula 06</a>
+                <a href="Aula7.html">Aula 07</a>
+                <a href="Aula8.html" class="active">Aula 08</a>
+            </div>
+        </div>
+    </div>
+    <div class="Grid">
+        <div class="Texto">
+            <h1 id="aula-8">Aula 08</h1>
+
+                <h2>Matrizes</h2>
+                
+                <h3 id="assuntos-aula-8">Assuntos tratados</h3>
+                <p>&emsp;&emsp;O que são listas (matrizes)? Quais são as diferenças entre uma lista vetor e uma lista matriz?
+                    Como as matrizes armazenam dados? Aplicações das matrizes?</p>
+
+                <h3 id="conceito-aula-8">Matrizes</h3>
+
+                <p>&emsp;&emsp;Similarmente aos vetores, as matrizes também são listas, conseguem armazenar diversos valores em uma
+                    única variável (lista). Como no conceito matemático, uma matriz é um conjunto de vetores, dessa forma, em python,
+                    uma lista deste tipo fica como segue:
+                    </p>
+                <p>&emsp;&emsp;&emsp;&emsp;matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+                    </p>
+                <p>&emsp;&emsp;Os índices se comportam como nos vetores, além disso, um valor adicional de localização pode ser
+                    adicionado. Caso apenas a linha seja identificada, todos os valores presentes naquela posição serão considerados,
+                    logo, concluímos que o segundo valor (adicional) é referente a coluna. Seguem as sintaxes:
+                    </p>
+                <p>&emsp;&emsp;&emsp;&emsp;matriz[0] == [1, 2, 3]
+                    <br>&emsp;&emsp;&emsp;&emsp;matriz[1][2] == 5
+                    </p>
+                <p>&emsp;&emsp;Resumindo, matrizes são estruturadas como vetores contendo vetores, onde cada vetor interno
+                    corresponde a uma linha, e cada um de seus elementos corresponde ao item naquela coluna e linha, ou seja, as
+                    colunas são dadas pelos índices de cada linha.
+                    </p>
+
+                <h3 id="utilidade-aula-8">Utilização na prática</h3>
+
+                    <p>&emsp;&emsp;Uma outra semelhança entre uma lista vetor e uma lista matriz está na manipulação da mesma. Até
+                        o momento, sempre que necessário percorrer os valores de um vetor, uma estrutura de repetição while já é
+                        suficiente. Um exemplo prático é um sorteio de um número único de um conjunto conhecido. Utilizando uma lista,
+                        a verificação deste ficaria como segue:
+                    </p>
+                <p>&emsp;&emsp;&emsp;&emsp;def confereSorteio(numSorteado, tamanho, lista):
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;i = 0
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;while i < tamanho:
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if numSorteado == lista[i]:
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;print(“O sorteado foi o {}!”.format(lista[i]))
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;i += 1
+                    </p>
+                <p>&emsp;&emsp;Caso o sorteio fosse de uma sequência de números (como na mega-sena), o vencedor seria identificado
+                    por uma sequência de números. Dessa forma, apenas um vetor não conseguiria armazenar estes valores de forma
+                    organizada e uma lista matriz é a solução. Para verificar o vencedor, então, serão necessárias três estruturas de
+                    repetição:
+                    </p>&emsp;&emsp;&emsp;&emsp;def confereSorteio(vetorSorteado, apostas, matriz): 
+                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;i = 0
+                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;while i < apostas:
+                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;j = 0
+                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cont = 0
+                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;while j < 6:
+                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if vetor[k] == matriz[i][j]
+                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cont += 1
+                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;k += 1
+                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;j += 1
+                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if cont >= 4:
+                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;print("Vetor sorteado vencedor na linha {}".format(i+1))
+                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;i += 1
+                        </p>
+                <p>&emsp;&emsp;Em virtude da estrutura das matrizes, que matematicamente são definidas com um número específico de
+                    linhas e colunas, é recomendável que todos os vetores que compõem uma matriz tenham o mesmo número de elementos,
+                    fazendo com que todas as linhas tenham a mesma quantidade de colunas correspondentes. É possível ilustrar a
+                    questão a partir do seguinte exemplo:
+                    </p>
+                <p>&emsp;&emsp;&emsp;&emsp;m = [[1,2,3], [1,2], [1,2], [1,2]]
+                    <br>&emsp;&emsp;&emsp;&emsp;m corresponderia a uma matriz como segue:
+                    <br><br>&emsp;&emsp;&emsp;&emsp;[[1,2,3]
+                    <br>&emsp;&emsp;&emsp;&emsp;[1,2]
+                    <br>&emsp;&emsp;&emsp;&emsp;[1,2]
+                    <br>&emsp;&emsp;&emsp;&emsp;[1,2]]
+                    </p>
+                <p>&emsp;&emsp;&emsp;&emsp;Observa-se que a primeira linha possui 3 elementos, ou seja, 3 colunas, enquanto as demais
+                    possuem somente 2. Essa sintaxe não pode caracterizar uma matriz no padrão matemático, uma vez que é impossível
+                    definir um número fixo de colunas com relação a cada linha. Esse tipo de sintaxe pode não funcionar corretamente
+                    ao se aplicar a matriz em loops, uma vez que não é possível iterar igualmente por todos os valores de cada lista.
+                    Portanto, o melhor seria deixar alguns elementos fora das iterações, do contrário o programa geraria a exceção
+                    “index out of range” quando tentasse executar os comandos do loop em linhas com índice menor.
+                    </p>
+        </div>
+        <div class="Navegação">
+            <dt>
+                <h1>Aula 08</h1>
+                <a href="#assuntos-aula-8"><dd>Assuntos tratados</dd></a>
+                <a href="#conceitos-aula-8"><dd>Matrizes</dd></a>
+                <a href="#utilidade-aula-8"><dd>Utilização prática</dd></a>
+            </dt>
+        </div>
+        <div class="Rodape">
+            <address>
+                Responsáveis pela página <a href="mailto:leonardoq@alunos.utfpr.edu.br" id="mailto">Leonardo J. R. Quadros e Maria F. O. de Figueiredo</a>.
+            </address>
+        </div>
+    </div>
+</body>
+</html>
