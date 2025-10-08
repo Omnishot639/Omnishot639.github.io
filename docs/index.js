@@ -5,6 +5,6 @@ function toggleTheme() {
 function copyEmail() {
   const email = document.getElementById('email').textContent.trim();
   navigator.clipboard.writeText(email)
-    .then(() => alert('E-mail copiado: ' + email))
+    .then(() => alert('E-mail copiado (e-mail copied): ' + email))
     .catch(() => alert('Não foi possível copiar. Copie manualmente.'));
 }
