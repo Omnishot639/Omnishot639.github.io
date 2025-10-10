@@ -55,6 +55,23 @@ h2, h3 {
   color: #fff;
 }
 
+.language-switcher {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 8px;
+}
+
+.language-switcher a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  color: inherit;
+}
+
 .avatar {
   width: 120px;
   height: 120px;
@@ -109,6 +126,20 @@ h2, h3 {
   font-size: 0.9rem;
   color: var(--muted);
 }
+
+footer button a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+}
+
+footer img {
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.3);
+}
+
 
 /* Modo escuro */
 body.dark {
